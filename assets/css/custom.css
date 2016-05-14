@@ -1,0 +1,64 @@
+p{
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+p.user{
+
+	float: right;
+}
+
+p.home{
+
+	margin-bottom: 70px;
+}
+a.navbar-brand{
+padding-top: 0;
+
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form, .container-fluid{
+
+	background-color: #216C67;
+
+}
+
+.navbar-default .navbar-nav>li>a{
+
+	color: white;
+}
+
+.btn-primary{
+
+	background-color: #216C67;
+	border-color:#216C67;
+}
+
+.form{
+	color:white;
+	border-color: #D8CCBB;
+	background-color: #D8CCBB;
+	border-radius:5px;
+	padding: 10px;
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 50px
+}
+
+footer{
+border-color: #AFAEAE;
+background-color: #AFAEAE;
+color:white;
+margin-top: 80px;
+text-align:center;
+height: 20px;
+position: bottom;
+
+}
+
+.carousel.slide{
+
+	width: 400px;
+
+}
+
