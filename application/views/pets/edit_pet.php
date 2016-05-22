@@ -1,23 +1,23 @@
 <div class="form">
-<h2>Register</h2>
+<h2>Edit Pet</h2>
 
-<?php $attributes = array('id' =>'register_form', 'class'=>'form_horizontal')?>
+<?php $attributes = array('id' =>'create_form', 'class'=>'form_horizontal')?>
 
 <?php echo validation_errors("<p class='bg-danger'>"); ?>
 
-<?php echo form_open('users/register', $attributes); ?>
+<?php echo form_open('pets/edit/'. $pet_data->id .'', $attributes); ?>
 
 <div class="form-group">
 	
-	<?php echo form_label('First Name'); ?>
+	<?php echo form_label('Pets Name'); ?>
 
 	<?php 
 
 		$data = array(
 
 			'class' => 'form-control',
-			'name' => 'first_name',
-			'placeholder' => 'Enter First Name'
+			'name' => 'petName',
+			'value' => $pet_data->petName
 			
 			);
 
@@ -27,15 +27,15 @@
 
 <div class="form-group">
 	
-	<?php echo form_label('Last Name'); ?>
+	<?php echo form_label('Breed'); ?>
 
 	<?php 
 
 		$data = array(
 
 			'class' => 'form-control',
-			'name' => 'last_name',
-			'placeholder' => 'Enter Last Name'
+			'name' => 'breed',
+			'value' => $pet_data->breed
 			
 			);
 
@@ -45,15 +45,15 @@
 
 <div class="form-group">
 	
-	<?php echo form_label('E-mail'); ?>
+	<?php echo form_label('Date of Birth'); ?>
 
 	<?php 
 
 		$data = array(
 
 			'class' => 'form-control',
-			'name' => 'email',
-			'placeholder' => 'Enter your E-mail'
+			'name' => 'birth',
+			'value' => $pet_data->birth
 			
 			);
 
@@ -63,15 +63,15 @@
 
 <div class="form-group">
 	
-	<?php echo form_label('Username'); ?>
+	<?php echo form_label('Weight'); ?>
 
 	<?php 
 
 		$data = array(
 
 			'class' => 'form-control',
-			'name' => 'username',
-			'placeholder' => 'Enter Username'
+			'name' => 'weight',
+			'value' => $pet_data->weight
 			
 			);
 
@@ -82,44 +82,60 @@
 
 <div class="form-group">
 	
-	<?php echo form_label('Password'); ?>
+	<?php echo form_label('Height'); ?>
 
 	<?php 
 
 		$data = array(
 
 			'class' => 'form-control',
-			'name' => 'password',
-			'placeholder' => 'Enter Password'
+			'name' => 'height',
+			'value' => $pet_data->height
 			
 			);
 
 	 ?>
 
-	<?php echo form_password($data);?>
+	<?php echo form_input($data);?>
 
 
 </div>
 
 <div class="form-group">
 	
-	<?php echo form_label('Confrim Password'); ?>
+	<?php echo form_label('Gender'); ?>
 
 	<?php 
 
 		$data = array(
 
 			'class' => 'form-control',
-			'name' => 'con_password',
-			'placeholder' => 'Confrim Password'
+			'name' => 'gender',
+			'value' => $pet_data->gender
 			
 			);
 
 	 ?>
-	 <?php echo form_password($data);?>
+	 <?php echo form_input($data);?>
+</div>
+<div class="form-group">
+	
+	<?php echo form_label('Description'); ?>
+
+	<?php 
+
+		$data = array(
+
+			'class' => 'form-control',
+			'name' => 'description',
+			'value' => $pet_data->description
+			
+			);
+
+	 ?>
+	 <?php echo form_textarea($data);?>
 </div>
 
-<div class="form-group">
 	
 	<?php 
 
@@ -127,7 +143,7 @@
 
 			'class' => 'btn btn-primary',
 			'name' => 'sumbit',
-			'value' => 'Register'
+			'value' => 'Update Pet'
 			
 			);
 

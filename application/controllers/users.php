@@ -74,11 +74,11 @@ public function register() {
 
 			$this->session->set_flashdata('login_success', 'You are now logged in');
 
-			$data['main_view'] = "admin_view";
+			//$data['main_view'] = "pets";
 
-			$this->load->view('layouts/main', $data);
+			//$this->load->view('layouts/main', $data);
 
-			
+			redirect ('home/index');
 		}else{
 
 			$this->session->set_flashdata('login_failed', 'Sorry you are not logged in');

@@ -30,15 +30,15 @@
     		
 	         <li class="active"><a href="<?php echo base_url();?>">HOME<span class="sr-only">(current)</span></a></li>
 	          <?php if($this->session->userdata('logged_in')): ?>
-	         <li><a href="<?php echo base_url();?>/admin/dash">DASHBOARD<span class="sr-only">(current)</span></a></li>
+	         <li><a href="<?php echo base_url();?>pets">DASHBOARD<span class="sr-only">(current)</span></a></li>
 	          <?php endif; ?>
 	         <li><a href="">ADOPT A PET<span class="sr-only">(current)</span></a></li>
-	         <li><a href="#">Link</a></li>
+	         <li><a href="#"></a></li>
 	         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOGIN/REGISTER <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('users/login'); ?>">LOGIN</a></li>
-            <li><a href="<?php echo base_url();?>/users/register">REGISTER<span class="sr-only">(current)</span></a></li>
+            <li><a href="<?php echo base_url();?>users/register">REGISTER<span class="sr-only">(current)</span></a></li>
              <li role="separator" class="divider"></li>
              <?php if($this->session->userdata('logged_in')): ?>
             <li><a href="<?php echo base_url();?>users/logout">LOGOUT</a></li>

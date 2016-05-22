@@ -6,6 +6,7 @@
 
 <?php endif; ?>
 
+
 <?php if($this->session->flashdata('user_registered')): ?>
 
 <?php echo $this->session->flashdata('user_registered'); ?>
@@ -16,6 +17,13 @@
 
 <p class="bg-danger">
 
+<?php if($this->session->flashdata('no_access')): ?>
+
+<?php echo $this->session->flashdata('no_access'); ?>
+
+<?php endif; ?>
+
+
 <?php if($this->session->flashdata('login_failed')): ?>
 
 <?php echo $this->session->flashdata('login_failed'); ?>
@@ -23,4 +31,4 @@
 <?php endif; ?>
 
 </p>
-<h1></h1>
+
