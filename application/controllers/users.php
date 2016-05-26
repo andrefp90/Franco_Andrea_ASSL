@@ -2,11 +2,12 @@
 
 class Users extends CI_Controller {
 
+//validation and setting rules for the users input when they register if it is succesfull it creates new user 
 public function register() {
 
 		$this->form_validation->set_rules('first_name','First Name','trim|required|min_length[3]');
 		$this->form_validation->set_rules('last_name','Last Name','trim|required|min_length[3]');
-		$this->form_validation->set_rules('email','E-mail','trim|required|min_length[3]');
+		$this->form_validation->set_rules('email','E-mail','trim|required|valid_email');
 		$this->form_validation->set_rules('username','Username','trim|required|min_length[3]');
 		$this->form_validation->set_rules('password','Password','trim|required|min_length[3]');
 		$this->form_validation->set_rules('con_password','Confirm Password','trim|required|min_length[3]');
@@ -26,6 +27,7 @@ public function register() {
 
 				$this->session->set_flashdata('user_registered','User has been succesfully registerd!');
 				redirect('home/index');
+				
 
 			}else{
 
@@ -35,7 +37,7 @@ public function register() {
 		}
 
 }
-	
+	//validation and setting rules for log in  and posting if it validates 
 
 	public function login() {
 
@@ -74,9 +76,7 @@ public function register() {
 
 			$this->session->set_flashdata('login_success', 'You are now logged in');
 
-			//$data['main_view'] = "pets";
-
-			//$this->load->view('layouts/main', $data);
+			
 
 			redirect ('home/index');
 		}else{
@@ -87,8 +87,9 @@ public function register() {
 
 	}
 		
-		 //$this->input->post('username');
 	}
+
+	//With th function logout it destroy the active session 
 
 	public function logout() {
 

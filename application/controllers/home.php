@@ -2,6 +2,7 @@
 
 class Home extends CI_Controller {
 
+//Inside the controller Home with function of index using a conditional statment to verify if the user ids logged in and get the users pets and tasks 
 	public function index() {
 
 		if($this->session->userdata('logged_in')){
@@ -16,12 +17,6 @@ class Home extends CI_Controller {
 
 		$this->load->view('layouts/main', $data);
 		$this->load->view('users/login_view'); 
-
-
-	
-
-	
-
-	}
+}
 }
 ?>

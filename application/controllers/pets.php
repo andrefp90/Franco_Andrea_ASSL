@@ -5,6 +5,8 @@ class Pets extends CI_Controller {
 	public function __construct(){
 
 			parent::__construct();
+
+			//verify if user is logged in if not use set_flashdata to let the user know he/she is not logged in and redirect to home/index
 	
 	if(!$this->session->userdata('logged_in')){
 
@@ -14,7 +16,7 @@ class Pets extends CI_Controller {
 		redirect('home/index');
 	}
 }
-
+//If the user is logged in get all his/her pets 
 	public function index() {
 
 		$user_id = $this->session->userdata('user_id');
@@ -32,7 +34,7 @@ class Pets extends CI_Controller {
 
 
 
-
+//Get in/completed tasks and pets to display to the user 
 
 public function display($pet_id){
 
@@ -51,6 +53,7 @@ $this->load->view('layouts/main', $data);
 }
 
 
+//Function to create a new pet if the pet was succesfully created post it to the user in session 
 public function create(){
 
 
@@ -96,6 +99,7 @@ public function create(){
 	}
 }
 
+//function to edit pet using the pet_id if the pet was succesfully created post it to the user in session 
 public function edit($pet_id){
 
 
@@ -143,6 +147,7 @@ public function edit($pet_id){
 		}
 	}
 }
+//delete function will delete tasks and pets and announce it was deleted 
 
 public function delete($pet_id){
 

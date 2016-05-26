@@ -17,8 +17,8 @@
 
 			'class' => 'form-control',
 			'name' => 'petName',
-			'placeholder' => 'Enter Pets Name'
-			
+			'placeholder' => 'Enter Pets Name',
+			'value' =>set_value ('petName')
 			);
 
 	 ?>
@@ -35,7 +35,8 @@
 
 			'class' => 'form-control',
 			'name' => 'breed',
-			'placeholder' => 'Enter Pets Breed'
+			'placeholder' => 'Enter Pets Breed',
+			'value' =>set_value ('breed')
 			
 			);
 
@@ -53,7 +54,8 @@
 
 			'class' => 'form-control',
 			'name' => 'birth',
-			'type' => 'date'
+			'type' => 'date',
+			'value' =>set_value ('birth')
 			
 			);
 
@@ -71,7 +73,8 @@
 
 			'class' => 'form-control',
 			'name' => 'weight',
-			'placeholder' => 'Enter Weight '
+			'placeholder' => 'Enter Weight ',
+			'value' =>set_value ('weight')
 			
 			);
 
@@ -90,8 +93,8 @@
 
 			'class' => 'form-control',
 			'name' => 'height',
-			'placeholder' => 'Enter height'
-			
+			'placeholder' => 'Enter height',
+			'value' =>set_value ('height')
 			);
 
 	 ?>
@@ -111,8 +114,8 @@
 
 			'class' => 'form-control',
 			'name' => 'gender',
-			'placeholder' => 'Enter pets gender'
-			
+			'placeholder' => 'Enter pets gender',
+			'value' =>set_value ('gender')
 			);
 
 	 ?>
@@ -128,8 +131,8 @@
 
 			'class' => 'form-control',
 			'name' => 'description',
-			'placeholder' => 'Your pets story....'
-			
+			'placeholder' => 'Your pets story....',
+			'value' =>set_value ('description')
 			);
 
 	 ?>

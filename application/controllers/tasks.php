@@ -3,7 +3,7 @@
 
 class Tasks extends CI_Controller{
 
-
+//the display fucntion in tasks will get the pets id name and task associated with it to be able to display 
 	public function display($task_id){
 
 
@@ -21,7 +21,7 @@ class Tasks extends CI_Controller{
 		$this->load->view('layouts/main', $data);
 	}
 
-
+//function that creates task using the pets id and posting the new data 
 	public function create($pet_id){
 
 
@@ -60,6 +60,7 @@ class Tasks extends CI_Controller{
 	}
 }
 
+//function that edits existing  task using the pets id and posting the new data 
 public function edit($task_id){
 
 
@@ -107,6 +108,8 @@ public function edit($task_id){
 	}
 }
 
+//delete function can delete the task 
+
 public function delete($pet_id,  $task_id){
 
 
@@ -120,6 +123,7 @@ redirect("pets/display/" . $pet_id . " ");
 
 }
 
+//function in/ complete will mark the task as completed or not completed 
 public function mark_complete($task_id){
 
 if($this->task_model->mark_task_complete($task_id)){
