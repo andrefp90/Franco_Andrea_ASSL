@@ -37,6 +37,7 @@ if($this->uri->segment(1) == 'pets'){
   -jQuery
    -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/custom.css">
 	<script src="<?php echo base_url();?>assets/js/jquery.js"></script>
